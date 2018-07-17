@@ -36,10 +36,10 @@ db.on('disconnected', () => {
 // INSERT USING MONGOOSE
 // ### Add the vampire data that we gave you
 
-// Vampire.collection.insertMany(VampireData,(err, data) => {
-//     console.log("added provided vampire data")
-//     mongoose.connection.close();
-//   });
+Vampire.collection.insertMany(VampireData,(err, data) => {
+    console.log("added provided vampire data")
+    mongoose.connection.close();
+  });
 
 // ### Add some new vampire data
 
@@ -91,22 +91,22 @@ mongoose.connection.close();
 // ## QUERYING
 /////////////////////////////////////////////////
 // ### Select by comparison
-1. db.vampires.find({'gender': 'f'})
-2. db.vampires.find({victims: {$gt: 500}})
-3. db.vampires.find({victims: {$lte: 150}})
-4. db.vampires.find({victims: {$ne: 210234}})
-5. db.vampires.find({victims: {$gt: 150, $lt: 500}})
+// 1. db.vampires.find({'gender': 'f'})
+// 2. db.vampires.find({victims: {$gt: 500}})
+// 3. db.vampires.find({victims: {$lte: 150}})
+// 4. db.vampires.find({victims: {$ne: 210234}})
+// 5. db.vampires.find({victims: {$gt: 150, $lt: 500}})
 
 /////////////////////////////////////////////////
 // ### Select by exists or does not exist
-1. db.vampires.find({title: {$ne: null}})
-2. db.vampires.find({victims: null})
-3. db.vampires.find({victims: null, title: {$ne: null}})
-4. db.vampires.find({victims: {$gt: 1000}})
+// 1. db.vampires.find({title: {$ne: null}})
+// 2. db.vampires.find({victims: null})
+// 3. db.vampires.find({victims: null, title: {$ne: null}})
+// 4. db.vampires.find({victims: {$ne: null, $gt: 1000}})
 
 /////////////////////////////////////////////////
 // ### Select with OR
-
+1. db.vampires.find({$or: [{location: 'New York, New York, US'}, {location: 'New Orleans, Louisiana, US'}]})
 /////////////////////////////////////////////////
 //### Select objects that match one of several values
 
