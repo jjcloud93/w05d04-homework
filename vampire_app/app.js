@@ -106,9 +106,17 @@ mongoose.connection.close();
 
 /////////////////////////////////////////////////
 // ### Select with OR
-1. db.vampires.find({$or: [{location: 'New York, New York, US'}, {location: 'New Orleans, Louisiana, US'}]})
+// 1. db.vampires.find({$or: [{location: 'New York, New York, US'}, {location: 'New Orleans, Louisiana, US'}]})
+// 2. db.vampires.find({$or: [{loves: 'brooding'}, {loves: 'being tragic'}]})
+// 3. db.vampires.find({$or: [{victims: {$gt: 500}}, {loves: 'marshmallows'}]})
+// 4. db.vampires.find({$or: [{hair_color: 'red'}, {eye_color: 'green'}]})
+
 /////////////////////////////////////////////////
 //### Select objects that match one of several values
+// 1. db.vampires.find({$or: [{loves: 'frilly shirtsleeves'}, {loves: 'frilly collars'}]})
+// 2. db.vampires.find({loves: 'brooding'})
+// 3. db.vampires.find({$or: [{loves: 'appearing innocent'}{loves: 'trickery'}{loves: 'lurking in rotting mansions'}{loves: 'R&B music'}]}) 
+// 4. db.vampires.find({loves: 'fancy cloaks', loves: {$ne: top hats}, oves: {$ne: virgin blood}]})
 
 /////////////////////////////////////////////////
 //### Negative Selection
