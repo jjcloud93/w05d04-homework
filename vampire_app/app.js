@@ -128,15 +128,24 @@ mongoose.connection.close();
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // ## REPLACE
+// 1. db.vampires.update({_id: ObjectId("5b4e03d544ee150300eb9df7")}, $set: {name: 'Eve'})
+// 2. db.vampires.update({_id: ObjectId("5b4e03d544ee150300eb9df2")}, $set: {name: 'Guy Man'})
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // ## UPDATE
+// 1. db.vampires.update({_id: ObjectId("5b4e03d544ee150300eb9df2")}, $set: {gender: 'f'})
+// 2. db.vampires.update({_id: ObjectId("5b4e03d544ee150300eb9df7")}, $set: {gender: 'm'})
+// 3. db.vampires.update({_id: ObjectId("5b4e03d544ee150300eb9df2")}, $set: {hates: 'clothes', 'jobs'})
+// 4. db.vampires.update({_id: ObjectId("5b4e03d544ee150300eb9df2")}, $set: {name: 'moniker'})
+// 5. db.vampires.update({_id: ObjectId("5b4e03d544ee150300eb9df7")}, $set: {name: 'Eve'})
+// 6. db.vampires.find({gender: 'f'}.update($set: {gender: 'fems'}))
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // ## REMOVE
-
+// 1.db.vampires.remove({hair_color: 'brown'})
+// 2. db.vampires.delete({eye_color: 'blue'})
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 
