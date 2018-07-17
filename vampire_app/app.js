@@ -120,6 +120,10 @@ mongoose.connection.close();
 
 /////////////////////////////////////////////////
 //### Negative Selection
+// 1. db.vampires.find({$and: [{loves: 'blue ribbons'}, {eye_color: {$ne: brown}}]})
+// 2. db.vampires.find({location: {$ne: 'Rome'}})
+// 3. db.vampires.find({$and: [{loves: {$ne: 'fancy cloaks'}}, [{loves: {$ne: 'frilly shirtsleeves'}}, [{loves: {$ne: 'appearing innocent'}}, [{loves: {$ne: 'being tragic'}}, [{loves: {$ne: 'brooding'}}]})
+// 4. db.vampires.find({victims: {lte: 200}})
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
