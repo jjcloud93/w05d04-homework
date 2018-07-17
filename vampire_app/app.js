@@ -99,6 +99,10 @@ mongoose.connection.close();
 
 /////////////////////////////////////////////////
 // ### Select by exists or does not exist
+1. db.vampires.find({title: {$ne: null}})
+2. db.vampires.find({victims: null})
+3. db.vampires.find({victims: null, title: {$ne: null}})
+4. db.vampires.find({victims: {$gt: 1000}})
 
 /////////////////////////////////////////////////
 // ### Select with OR
